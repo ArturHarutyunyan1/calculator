@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    transition: 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    box-sizing: border-box;
+}
+
+:root{
+    --theme1-bg-color: #3b4664;
+    --theme1-text-color: #fdfefc;
+    --theme1-display-color: #181f32;
+    --theme1-keypad-color: #252d44;
+    --theme1-button-color: #eae3db;
+    --theme1-button-text-color: #434957;
+    --theme1-reset: #647299;
+    --theme1-equal: #d13f30;
+    --theme1-shadow-color: #b1a398;
+    --theme2-bg-color: #e6e6e6;
+    --theme2-text-color: #3d3d32;
+    --theme2-display-color: #eeeeee;
+    --theme2-keypad-color: #d3cdcd;
+    --theme2-button-color: #e5e4e0;
+    --theme2-button-text-color: #2f2e28;
+    --theme2-reset: #388186;
+    --theme2-equal: #c85401;
+    --theme2-shadow-color: #a59e92;
+    --theme3-bg-color: #17062a;
+    --theme3-text-color: #fee842;
+    --theme3-display-color: #1e0836;
+    --theme3-keypad-color: #1e0836;
+    --theme3-button-color: #331b4d;
+    --theme3-button-text-color: #f6db56;
+    --theme3-reset: #56077c;
+    --theme3-equal: #00decf;
+    --theme3-shadow-color: #86209e;
+}
+
+body{
+    font-family: 'Spartan', sans-serif;
+    font-size: 32px;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 450px;
+    height: auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.inline{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.inline p{
+    margin-top: 5px;
+}
+
+.theme-chooser{
+    width: 100%;
+    height: 20px;
+    border-radius: 100px;
+    margin-left: 15px;
+    display: flex;
+}
+
+.choose{
+    width: 13px;
+    height: 13px;
+    background-color: grey;
+    border-radius: 50%;
+    opacity: 0;
+    border: none;
+    margin: 3px;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+
+.display{
+    width: 450px;
+    height: 100px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+
+.buttons{
+    width: 450px;
+    margin: 15px 0;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button{
+    width: 90px;
+    height: 55px;
+    margin: 15px auto;
+    font-size: 33px;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+}
+
+@media (max-width: 768px){
+    .wrapper{
+        width: 100%;
+    }
+    .display{
+        width: 100%;
+        margin: 0;
+    }
+    .buttons{
+        margin-top: 10px;
+        padding: 0;
+        width: 100%;
+    }
+}
+
+.theme1{
+    background-color: var(--theme1-bg-color);
+    color: var(--theme1-text-color);
+}
+
+.theme1 .display{
+    background-color: var(--theme1-display-color);
+}
+
+.theme1 .buttons{
+    background-color: var(--theme1-keypad-color);
+}
+
+.theme1 .button{
+    background-color: var(--theme1-button-color);
+    color: var(--theme1-button-text-color);
+    box-shadow: 0px 5px 0px 0px #b1a398;
+}
+
+.theme1 .percent{
+    background-color: var(--theme1-reset);
+    color: var(--theme1-text-color);
+    box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
+    font-size: 25px;
+}
+
+.theme1 .equal{
+    background-color: var(--theme1-equal);
+    color: var(--theme1-text-color);
+    box-shadow: 0px 5px 0px 0px hsl(6, 70%, 34%);
+    width: 200px;
+}
+
+.theme1 .reset{
+    background-color: var(--theme1-reset);
+    color: var(--theme1-text-color);
+    box-shadow: 0px 5px 0px 0px hsl(224, 28%, 35%);
+    font-size: 25px;
+    width: 200px;
+}
+
+.theme1 .theme-chooser{
+    border: 1px solid var(--theme1-text-color);
+}
+
+.theme1 .choose:nth-child(1){
+    background-color: var(--theme1-equal);
+    opacity: 1;
+}
+
+.theme2{
+    background-color: var(--theme2-bg-color);
+    color: var(--theme2-text-color);
+}
+
+.theme2 .display{
+    background-color: var(--theme2-display-color);
+}
+
+.theme2 .buttons{
+    background-color: var(--theme2-keypad-color);
+}
+
+.theme2 .button{
+    background-color: var(--theme2-button-color);
+    color: var(--theme2-button-text-color);
+    box-shadow: 0px 5px 0px 0px #b1a398;
+}
+
+.theme2 .percent{
+    background-color: var(--theme2-reset);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #1b6166;
+    font-size: 25px;
+}
+
+.theme2 .equal{
+    background-color: var(--theme2-equal);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #8b3901;
+    width: 200px;
+}
+
+.theme2 .reset{
+    background-color: var(--theme2-reset);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #1b6166;
+    font-size: 25px;
+    width: 200px;
+}
+
+.theme2 .theme-chooser{
+    border: 1px solid var(--theme2-text-color);
+}
+
+.theme2 .choose:nth-child(2){
+    background-color: var(--theme2-equal);
+    opacity: 1;
+}
+
+
+.theme3{
+    background-color: var(--theme3-bg-color);
+    color: var(--theme3-text-color);
+}
+
+.theme3 .display{
+    background-color: var(--theme3-display-color);
+}
+
+.theme3 .buttons{
+    background-color: var(--theme3-keypad-color);
+}
+
+.theme3 .button{
+    background-color: var(--theme3-button-color);
+    color: var(--theme3-button-text-color);
+    box-shadow: 0px 5px 0px 0px var(--theme3-shadow-color);
+}
+
+.theme3 .percent{
+    background-color: var(--theme3-reset);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #b91aed;
+    font-size: 25px;
+}
+
+.theme3 .equal{
+    background-color: var(--theme3-equal);
+    color: #00424a;
+    box-shadow: 0px 5px 0px 0px #67fcf2;
+    width: 200px;
+}
+
+.theme3 .reset{
+    background-color: var(--theme3-reset);
+    color: white;
+    box-shadow: 0px 5px 0px 0px #b91aed;
+    font-size: 25px;
+    width: 200px;
+}
+
+.theme3 .theme-chooser{
+    border: 1px solid var(--theme3-text-color);
+}
+
+.theme3 .choose:nth-child(3){
+    background-color: var(--theme3-equal);
+    opacity: 1;
+}
+
+.theme1 .theme2 .theme3, .button:active{
+    transform: translateY(5px);
+    box-shadow: none;
+}
